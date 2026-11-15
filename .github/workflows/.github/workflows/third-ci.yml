@@ -1,0 +1,21 @@
+name: Third CI
+
+on:
+  push:
+
+jobs:
+  third_job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Print Message
+        run: echo "This is the third pipeline"
+
+      - name: Show Current Directory
+        run: pwd
+
+      - name: List Files
+        run: ls -la
